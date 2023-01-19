@@ -3,6 +3,37 @@ title: "第 6 章 对象"
 date: 2020-11-02T22:18:37+08:00
 ---
 
+- [6.1 Introduction to Objects](#61-introduction-to-objects)
+- [6.2 Creating Objects](#62-creating-objects)
+  - [6.2.1 Object Literals](#621-object-literals)
+  - [6.2.2 Creating Objects with new](#622-creating-objects-with-new)
+  - [6.2.3 Prototypes](#623-prototypes)
+  - [6.2.4 Object.create()](#624-objectcreate)
+- [6.3 Querying and Setting Properties](#63-querying-and-setting-properties)
+  - [6.3.1 Objects As Associative Arrays](#631-objects-as-associative-arrays)
+  - [6.3.2 Inheritance](#632-inheritance)
+  - [6.3.3 Property Access Errors](#633-property-access-errors)
+- [6.4 Deleting Properties](#64-deleting-properties)
+- [6.5 Testing Properties](#65-testing-properties)
+- [6.6 Enumerating Properties](#66-enumerating-properties)
+  - [6.6.1 Property Enumeration Order](#661-property-enumeration-order)
+- [6.7 Extending Objects](#67-extending-objects)
+- [6.8 Serializing Objects](#68-serializing-objects)
+- [6.9 Object Methods](#69-object-methods)
+  - [6.9.1 The toString() Method](#691-the-tostring-method)
+  - [6.9.2 The toLocaleString() Method](#692-the-tolocalestring-method)
+  - [6.9.3 The valueOf() Method](#693-the-valueof-method)
+  - [6.9.4 The toJSON() Method](#694-the-tojson-method)
+- [6.10 Extended Object Literal Syntax](#610-extended-object-literal-syntax)
+  - [6.10.1 Shorthand Properties](#6101-shorthand-properties)
+  - [6.10.2 Computed Property Names](#6102-computed-property-names)
+  - [6.10.3 Symbols as Property Names](#6103-symbols-as-property-names)
+  - [6.10.4 Spread Operator](#6104-spread-operator)
+  - [6.10.5 Shorthand Methods](#6105-shorthand-methods)
+  - [6.10.6 Property Getters and Setters](#6106-property-getters-and-setters)
+- [6.11 Summary](#611-summary)
+
+
 Objects are JavaScript’s most fundamental datatype, and you have already seen them many times in the chapters that precede this one. Because objects are so important to the JavaScript language, it is important that you understand how they work in detail, and this chapter provides that detail. It begins with a formal overview of objects, then dives into practical sections about creating objects and querying, setting, deleting, testing, and enumerating the properties of objects. These property-focused sections are followed by sections that explain how to extend, serialize, and define important methods on objects. Finally, the chapter concludes with a long section about new object literal syntax in ES6 and more recent versions of the language.
 
 > 对象是 JavaScript 最基本的数据类型，在本章之前的章节中已经多次看到它们。因为对象对 JavaScript 语言非常重要，所以了解它们的工作原理非常重要，本章将提供这些细节。它从对象的正式概述开始，然后深入到关于创建对象以及查询、设置、删除、测试和枚举对象属性的实用部分。在这些以属性为中心的章节之后，将介绍如何扩展、序列化和定义对象上的重要方法。最后，本章以一大段关于 ES6 中的新对象文字语法和该语言的最新版本结尾。
